@@ -40,6 +40,12 @@ void Adresse::toStream(stringstream& ss)
 	ss << nom << " ( " << latitude << " ; " << longitude << " )";
 }
 
+string Adresse::afficher()
+{
+	return nom + " ( " + to_string(latitude) + " ; " + to_string(longitude) + " )";;
+
+}
+
 
 string Adresse::getNom()
 {

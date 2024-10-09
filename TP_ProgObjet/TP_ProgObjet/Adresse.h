@@ -18,6 +18,7 @@ public:
 	void toStream(ostream& os);
 	void toStream();
 	void toStream(stringstream& ss);
+	string afficher();
 
 
 	// Getters
