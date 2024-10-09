@@ -1,14 +1,18 @@
 #pragma once
+#include <string>
+#include <iostream>
+using namespace std;
+
 class Adresse
 {
 private:
-	int numero;
-	float latitude;
-	float longitude;
+	string nom;
+	double latitude;
+	double longitude;
 
 public:
 	Adresse();
-	Adresse(int numero, float* latitude, float* longitude);
+	Adresse(string nom, double latitude, double longitude);
 	~Adresse();
 	void afficher();
 };
