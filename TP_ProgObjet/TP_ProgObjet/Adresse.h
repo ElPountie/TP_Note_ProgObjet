@@ -15,5 +15,13 @@ public:
 	Adresse(string nom, double latitude, double longitude);
 	~Adresse();
 	void afficher();
+	// Getters
+	string getNom();
+	double getLatitude();
+	double getLongitude();
+	// Setters
+	void setNom(string nom);
+	void setLatitude(double latitude);
+	void setLongitude(double longitude);
 };
 

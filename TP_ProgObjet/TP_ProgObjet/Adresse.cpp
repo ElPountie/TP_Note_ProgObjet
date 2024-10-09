@@ -28,3 +28,34 @@ void Adresse::afficher()
 {
 	std::cout << "Adresse : " << nom << " " << latitude << " " << longitude << std::endl;
 }
+
+string Adresse::getNom()
+{
+	return nom;
+}
+
+double Adresse::getLatitude()
+{
+	return latitude;
+}
+
+double Adresse::getLongitude()
+{
+	return longitude;
+}
+
+void Adresse::setNom(string nom)
+{
+	this->nom = nom;
+}
+
+void Adresse::setLatitude(double latitude)
+{
+	this->latitude = latitude;
+}
+
+void Adresse::setLongitude(double longitude)
+{
+	this->longitude = longitude;
+}
+
