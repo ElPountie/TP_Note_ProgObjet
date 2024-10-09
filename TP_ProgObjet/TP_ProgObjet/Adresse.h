@@ -14,7 +14,12 @@ public:
 	Adresse();
 	Adresse(string nom, double latitude, double longitude);
 	~Adresse();
-	void afficher();
+
+	void toStream(ostream& os);
+	void toStream();
+	void toStream(stringstream& ss);
+
+
 	// Getters
 	string getNom();
 	double getLatitude();

@@ -1,5 +1,6 @@
 #include "Adresse.h"
 #include <iostream>
+#include <sstream>
 #include <cstring>
 
 using namespace std;
@@ -24,10 +25,21 @@ Adresse::~Adresse()
 	std::cout << "Destruction de l'adresse" << std::endl;
 }
 
-void Adresse::afficher()
+void Adresse::toStream(ostream& os)
 {
-	std::cout << "Adresse : " << nom << " " << latitude << " " << longitude << std::endl;
+	os << nom << " ( " << latitude << " ; " << longitude << " )";
 }
+
+void Adresse::toStream()
+{
+	cout << nom << " ( " << latitude << " ; " << longitude << " )";
+}
+
+void Adresse::toStream(stringstream& ss)
+{
+	ss << nom << " ( " << latitude << " ; " << longitude << " )";
+}
+
 
 string Adresse::getNom()
 {
