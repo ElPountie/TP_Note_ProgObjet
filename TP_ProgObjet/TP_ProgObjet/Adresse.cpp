@@ -22,7 +22,7 @@ Adresse::Adresse(string nom, double latitude, double longitude)
 
 Adresse::~Adresse()
 {
-	std::cout << "Destruction de l'adresse" << std::endl;
+	std::cout << "Destruction de l'adresse"<< nom << std::endl;
 }
 
 void Adresse::toStream(ostream& os)

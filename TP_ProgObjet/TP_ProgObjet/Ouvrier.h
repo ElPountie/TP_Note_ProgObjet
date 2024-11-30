@@ -4,21 +4,20 @@
 #include <string>
 #include "Adresse.h"
 using namespace std;
-class Ouvrier
-{
+
+class Ouvrier {
 private:
-	static int id;
-	static int compteur;
-	bool disponible;
-	Adresse chantier;
+    static int id;
+    static int compteur;
+    bool disponible;
+    Adresse chantier;
 
 public:
-	Ouvrier();
-	~Ouvrier();
-	void travailler(stringstream& ss);
-	int getId();
-	int getCompteur();
-	Adresse getChantier();
-	void setChantier(Adresse chantier);
+    Ouvrier();
+    virtual ~Ouvrier(); // Rendre le destructeur virtuel
+    void travailler(stringstream& ss);
+    int getId();
+    int getCompteur();
+    Adresse getChantier();
+    void setChantier(Adresse chantier);
 };
-

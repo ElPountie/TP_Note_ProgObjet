@@ -3,42 +3,34 @@
 int Ouvrier::id = 0;
 int Ouvrier::compteur = 0;
 
-Ouvrier::Ouvrier()
-{
-	id++;
-	compteur++;
-	disponible = true;
-	chantier = Adresse();
+Ouvrier::Ouvrier() {
+    id++;
+    compteur++;
+    disponible = true;
+    chantier = Adresse();
 }
 
-Ouvrier::~Ouvrier()
-{
-	compteur--;
-	delete chantier;
+Ouvrier::~Ouvrier() {
+    compteur--;
 }
 
-void Ouvrier::travailler(stringstream& ss)
-{
-	string s = ss.str();
-	cout << "Ouvrier " << id << " travaille a " << s << endl;
+void Ouvrier::travailler(stringstream& ss) {
+    string s = ss.str();
+    cout << "Ouvrier " << id << " travaille a " << s << endl;
 }
 
-int Ouvrier::getId()
-{
-	return id;
+int Ouvrier::getId() {
+    return id;
 }
 
-int Ouvrier::getCompteur()
-{
-	return compteur;
+int Ouvrier::getCompteur() {
+    return compteur;
 }
 
-Adresse Ouvrier::getChantier()
-{
-	return chantier;
+Adresse Ouvrier::getChantier() {
+    return chantier;
 }
 
-void Ouvrier::setChantier(Adresse chantier)
-{
-	this->chantier = chantier;
+void Ouvrier::setChantier(Adresse chantier) {
+    this->chantier = chantier;
 }
