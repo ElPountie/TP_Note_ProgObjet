@@ -1,16 +1,28 @@
 #include <iostream>
 #include "Ouvrier.h"
 #include "Adresse.h"
+#include "chef.h"
 using namespace std;
 
 int main() {
-	const char* nom = "eiffel";
-	const double latitude = 48.8585;
-	const double longitude = 3.1103;
+	Ouvrier o1;
+	Ouvrier o2;
+	Chef* c = new Chef();
 
-	Adresse tour(nom, latitude, longitude);
+	std::cout << (o1.getChantier().getNom() == "ISIMA") << std::endl;
+	std::cout << (o2.getChantier().getNom() == "ISIMA") << std::endl;
+	std::cout << (c->getChantier().getNom() == "ISIMA") << std::endl;
 
-	std::cout << (tour.getNom() == nom) << std::endl;
-	std::cout << (tour.getLatitude() == latitude) << std::endl;
-	std::cout << (tour.getLongitude() == longitude) << std::endl;
+
+	c->ajouter(&o1);
+	c->ajouter(&o2);
+	c->setChantier(Adresse("notre dame", 48.8531, 2.3499));
+
+	std::cout << (o1.getChantier().getNom() == "notre dame") << std::endl;
+	std::cout << (o2.getChantier().getNom() == "notre dame") << std::endl;
+	std::cout << (c->getChantier().getNom() == "notre dame") << std::endl;
+
+	delete c;
+
+	return 0;
 }

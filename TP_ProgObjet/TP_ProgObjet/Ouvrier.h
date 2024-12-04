@@ -4,13 +4,13 @@
 #include <string>
 #include "Adresse.h"
 using namespace std;
-class Ouvrier
-{
+
+class Ouvrier {
 private:
-	static int id;
-	static int compteur;
-	bool disponible;
-	Adresse chantier;
+    static int id;
+    static int compteur;
+    bool disponible;
+    Adresse chantier;
 
 public:
 	Ouvrier();
@@ -22,3 +22,4 @@ public:
 	Adresse getChantier();
 	void setChantier(Adresse chantier);
 };
+
