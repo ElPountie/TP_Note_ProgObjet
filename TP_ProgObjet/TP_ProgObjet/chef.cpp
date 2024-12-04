@@ -1,16 +1,13 @@
-#include "Chef.h"
+#include "chef.h"
 
 Chef::Chef() : Ouvrier() {
 }
 
 Chef::~Chef() {
-    for (Ouvrier* ouvrier : equipe) {
-        delete ouvrier;
-    }
 }
 
-void Chef::ajouterOuvrier(Ouvrier& ouvrier) {
-    equipe.push_back(&ouvrier);
+void Chef::ajouter(Ouvrier* ouvrier) {
+    equipe.push_back(ouvrier);
 }
 
 void Chef::supprimerOuvrier(int index) {
@@ -18,4 +15,11 @@ void Chef::supprimerOuvrier(int index) {
         delete equipe[index];
         equipe.erase(equipe.begin() + index);
     }
+}
+
+void Chef::setChantier(Adresse chantier) {
+	__super::setChantier(chantier);
+    for (Ouvrier* ouvrier : equipe) {
+		ouvrier->setChantier(chantier);
+	}
 }

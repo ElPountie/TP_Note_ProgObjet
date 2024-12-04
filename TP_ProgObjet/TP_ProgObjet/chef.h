@@ -9,6 +9,7 @@ private:
 public:
     Chef();
     ~Chef();
-    void ajouterOuvrier(Ouvrier& ouvrier);
+    void ajouter(Ouvrier* ouvrier);
     void supprimerOuvrier(int index);
+	void setChantier(Adresse chantier);
 };

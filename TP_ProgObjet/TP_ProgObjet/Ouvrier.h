@@ -17,7 +17,7 @@ public:
     virtual ~Ouvrier(); // Rendre le destructeur virtuel
     void travailler(stringstream& ss);
     int getId();
-    int getCompteur();
+    static int getCompteur();
     Adresse getChantier();
-    void setChantier(Adresse chantier);
+    virtual void setChantier(Adresse chantier);
 };
