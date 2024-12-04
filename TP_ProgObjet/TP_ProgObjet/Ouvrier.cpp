@@ -14,13 +14,17 @@ Ouvrier::Ouvrier()
 Ouvrier::~Ouvrier()
 {
 	compteur--;
-	delete chantier;
 }
 
 void Ouvrier::travailler(stringstream& ss)
 {
 	string s = ss.str();
 	cout << "Ouvrier " << id << " travaille a " << s << endl;
+}
+
+void Ouvrier::travailler(ostream& os)
+{
+	os << "Ouvrier " << id << " travaille a " << chantier.afficher() << endl;
 }
 
 int Ouvrier::getId()

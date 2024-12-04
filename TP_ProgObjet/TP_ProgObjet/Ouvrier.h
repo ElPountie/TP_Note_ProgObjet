@@ -16,9 +16,9 @@ public:
 	Ouvrier();
 	~Ouvrier();
 	void travailler(stringstream& ss);
+	void travailler(ostream& os);
 	int getId();
 	int getCompteur();
 	Adresse getChantier();
 	void setChantier(Adresse chantier);
 };
-
