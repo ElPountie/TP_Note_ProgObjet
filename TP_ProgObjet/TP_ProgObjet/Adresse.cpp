@@ -7,9 +7,9 @@ using namespace std;
 
 Adresse::Adresse()
 {
-	this->nom = "";
-	this->latitude = 0.;
-	this->longitude = 0.;
+	this->nom = "ISIMA";
+	this->latitude = 45.7592;
+	this->longitude = 3.1104;
 }
 
 
@@ -22,7 +22,7 @@ Adresse::Adresse(string nom, double latitude, double longitude)
 
 Adresse::~Adresse()
 {
-	std::cout << "Destruction de l'adresse"<< nom << std::endl;
+	//std::cout << "Destruction de l'adresse "<< nom << std::endl;
 }
 
 void Adresse::toStream(ostream& os)
@@ -42,7 +42,7 @@ void Adresse::toStream(stringstream& ss)
 
 string Adresse::afficher()
 {
-	return nom + " ( " + to_string(latitude) + " ; " + to_string(longitude) + " )";;
+	return nom + " ( " + to_string(latitude) + " ; " + to_string(longitude) + " )";
 
 }
 
