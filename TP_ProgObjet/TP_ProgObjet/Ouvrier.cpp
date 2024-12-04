@@ -15,6 +15,8 @@ Ouvrier::~Ouvrier() {
 }
 
 void Ouvrier::travailler(stringstream& ss) {
+	//Add address to stream
+	ss << chantier.afficher();
     string s = ss.str();
     cout << "Ouvrier " << id << " travaille a " << s << endl;
 }

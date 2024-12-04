@@ -18,7 +18,7 @@ public:
 	void travailler(stringstream& ss);
 	void travailler(ostream& os);
 	int getId();
-	int getCompteur();
+	static int getCompteur();
 	Adresse getChantier();
 	void setChantier(Adresse chantier);
 };
