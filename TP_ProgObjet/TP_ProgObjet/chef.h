@@ -11,5 +11,5 @@ public:
     ~Chef();
     void ajouter(Ouvrier* ouvrier);
     void supprimerOuvrier(int index);
-	void setChantier(Adresse chantier);
+	void setChantier(Adresse chantier) override;
 };

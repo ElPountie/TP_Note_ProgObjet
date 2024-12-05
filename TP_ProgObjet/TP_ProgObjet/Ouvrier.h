@@ -20,6 +20,6 @@ public:
 	int getId();
 	static int getCompteur();
 	Adresse getChantier();
-	void setChantier(Adresse chantier);
+	virtual void setChantier(Adresse chantier);
 };
 
